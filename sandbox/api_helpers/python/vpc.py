@@ -3,9 +3,6 @@ import boto3
 def client_init():
     client = boto3.client('ec2', region_name='us-east-1')
     return client
-
-def vpc_creation(client):
-    client.create_vpc(CidrBlock='172.16.0.0/16')
     
 def delete_vpc(client, vpc_id):
     try:
@@ -27,4 +24,5 @@ def delete_vpc(client, vpc_id):
     
 if __name__ == '__main__':
     client = client_init()
-    delete_vpc(client, 'vpc-0ea66dcb86e935a51')
+    vpc_id = 'vpc-0ea66dcb86e935a51'
+    delete_vpc(client, vpc_id)
