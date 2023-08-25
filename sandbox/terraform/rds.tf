@@ -18,7 +18,6 @@ module "db" {
   max_allocated_storage = 10
 
   username = "admin"
-  
 
   db_subnet_group_name   = module.vpc.database_subnet_group_name
   multi_az               = "true"

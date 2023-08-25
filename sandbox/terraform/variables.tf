@@ -100,6 +100,11 @@ variable "cloudflare_api_token" {
   default     = "MQZ5hHZcF-Iozo1VmmiFpm_FvVSPtK7sWFtDT2wg"
 }
 
+variable "cloudflare_api_key" {
+  description = "cloudflare api key"
+  default     = "5ceaabe24c382f1fbdf07fb50a7ae582e47db"
+}
+
 variable "ssh_key_name" {
   description = "SSH Key"
   default     = "wordpress-dev-key"
