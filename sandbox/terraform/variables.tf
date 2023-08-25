@@ -82,6 +82,7 @@ variable "site_domain" {
 
 variable "cloudflare_zone" {
   description = "cloudflare Zone Id"
+  default     = "f0be0d5d63a2609740023562c7d050b6"
 }
 
 variable "dns_ttl" {
@@ -101,4 +102,5 @@ variable "cloudflare_api_token" {
 
 variable "ssh_key_name" {
   description = "SSH Key"
+  default     = "wordpress-dev-key"
 }
