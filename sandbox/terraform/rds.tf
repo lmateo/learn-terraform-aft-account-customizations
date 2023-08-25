@@ -3,7 +3,7 @@
 ##################################################################
 module "db" {
   source  = "terraform-aws-modules/rds/aws"
-  version = "5.0.0"
+  version = "~> 3.0"
 
   identifier = "${var.prefix}-${var.environment}-db"
 

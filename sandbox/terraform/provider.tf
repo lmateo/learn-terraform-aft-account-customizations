@@ -12,8 +12,7 @@ terraform {
   
 }
 
-
-
 provider "cloudflare" {
-  api_token = var.cloudflare_api_token
+  email   = "renzo_3011@hotmail.com.com"
+  api_key = var.cloudflare_api_token
 }
