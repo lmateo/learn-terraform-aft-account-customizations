@@ -9,6 +9,6 @@ resource "aws_efs_file_system" "efs" {
 resource "aws_efs_mount_target" "efs_target" {
   count           = length(module.vpc.azs)
   file_system_id  = aws_efs_file_system.efs.id
-  subnet_id       = module.vpc.private_subnets[count.index]
+  subnet_id       = module.vpc.private_subnets[count.index % length(module.vpc.private_subnets)]
   security_groups = [module.efs_sg.security_group_id]
 }
