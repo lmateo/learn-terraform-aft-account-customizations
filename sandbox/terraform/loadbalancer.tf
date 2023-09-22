@@ -7,7 +7,7 @@ resource "aws_lb" "application_loadbalancer" {
   subnets            = [aws_subnet.ec2_2_public_subnet.id, aws_subnet.ec2_1_public_subnet.id]
 
   access_logs {
-    bucket = "${aws_s3_bucket.sandbox_bucket}"
+    bucket = "${aws_s3_bucket.sandbox_bucket.bucket}"
     prefix = "fcf-alb-wp"
     enabled = true
   }
@@ -16,7 +16,7 @@ resource "aws_lb" "application_loadbalancer" {
     Environment = "sandbox-alb"
   }
   depends_on = [
-    aws_s3_bucket.sandbox_bucket,
+    aws_s3_bucket.sandbox_bucket.bucket,
   ]
 }
 
