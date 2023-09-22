@@ -7,7 +7,7 @@ resource "aws_lb" "application_loadbalancer" {
   subnets            = [aws_subnet.ec2_2_public_subnet.id, aws_subnet.ec2_1_public_subnet.id]
 
   access_logs {
-    bucket = "${aws_s3_bucket.alb_logs.bucket}"
+    bucket = "${aws_s3_bucket.sandbox_bucket}"
     prefix = "fcf-alb-wp"
     enabled = true
   }
