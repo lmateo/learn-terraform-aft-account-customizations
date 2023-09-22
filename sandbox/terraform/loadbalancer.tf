@@ -16,7 +16,7 @@ resource "aws_lb" "application_loadbalancer" {
     Environment = "sandbox-alb"
   }
   depends_on = [
-    aws_s3_bucket.alb_logs,
+    aws_s3_bucket.sandbox_bucket,
   ]
 }
 
